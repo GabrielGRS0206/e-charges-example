@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -21,7 +22,16 @@ public class PaymentMethodControllerV1 {
 
     @GetMapping
     public List<PaymentMethodsResponseDto> findAll(){
-        log.info("Get");
-        return feignClientApiPaymentMethod.findAll();
+        log.info("GET -> List payment methods");
+        //TODO restore finish project
+//        return feignClientApiPaymentMethod.findAll();
+        return mock();
     }
+
+    private List<PaymentMethodsResponseDto> mock() {
+        return Arrays.asList(PaymentMethodsResponseDto.builder()
+                .paymentMethod("PIX")
+                .build());
+    }
+
 }

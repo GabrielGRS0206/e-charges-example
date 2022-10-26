@@ -13,4 +13,6 @@ public class RegistryRequestDto {
     private String email;
     private String phone;
     private AddressRequestDto address;
+    private String paymentMethod;
+    private CardDataRequestDto cardData;
 }

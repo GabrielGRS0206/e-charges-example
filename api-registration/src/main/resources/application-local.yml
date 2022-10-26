@@ -1,0 +1,13 @@
+
+server:
+  port: 8090
+  servlet.contextPath: /api
+
+url-payment-method: localhost:8095/api/payment_method
+
+spring:
+  kafka:
+    producer:
+      topic:
+        topicregistration: 'topic-registration'
+
