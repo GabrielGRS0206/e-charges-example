@@ -7,8 +7,8 @@ import lombok.Data;
 @Data
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class RegistryResponseDto {
+public class PaymentMethodsResponseDto {
 
-    private String message;
-    private String chargeId;
+    private String paymentMethod;
+    private String quantityParcels;
 }

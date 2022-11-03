@@ -1,12 +1,13 @@
-package br.com.io.github.adapters.in.web.dto.request;
+package br.com.io.github.application.dto;
 
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-public class RegistryRequestDto {
+public class ChargeFinanceDto {
 
+    private String chargeId;
     private String name;
     private String document;
     private String dateBirth;
@@ -15,4 +16,6 @@ public class RegistryRequestDto {
     private AddressRequestDto address;
     private String paymentMethod;
     private CardDataRequestDto cardData;
+    private String amount;
+    private String quantityParcels;
 }

@@ -1,0 +1,10 @@
+
+server:
+  port: 8096
+
+spring:
+  kafka:
+    consumer:
+      topic:
+        topic-registration: 'topic-registration'
+
