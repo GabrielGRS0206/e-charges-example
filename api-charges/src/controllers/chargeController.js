@@ -2,11 +2,30 @@
 class ChargeController {
 
   static findById = (req, res) => {
-      res.status(200);
+    var obj = {
+      "charge": {
+        "id": req.params.id,
+        "name": "Gabriel Rocha",
+        "revisionDate": 1449128440000,
+        "value":58.9,
+        "type":"DEBITO"
+      }
+    };
+      res.status(200).json(obj);
   }
 
   static post = (req, res) => {
-      res.status(201).json(Math.random().toString(36));
+    var obj = {
+      "charge": {
+        "id": 585897,
+        "name": "Gabriel Rocha",
+        "revisionDate": 1449128440000,
+        "value":143.9,
+        "type":"PIX"
+      }
+    };
+
+      res.status(201).json(obj);
   }
 }
 
